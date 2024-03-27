@@ -1,0 +1,25 @@
+# Program untuk menyelesaikan tugas 1 DAA nomor 1
+# Tugas dikerjakan menggunakan pendekatan Exhaustive Search, yaitu dengan melakukan
+# Pengurutan terhadap semua bilangan dari yang terkecil ke terbesar
+# Setelah itu, otomatis bilangan yang berada pada paling kiri adalah bilangan terkecil
+# dan bilangan pada paling kanan adalah bilangan paling besar
+# Jika terdapat bilangan 0 maka akan di hapus
+
+def cariPecahanTerbesar(arr):
+    # print(arr)
+
+    arr.sort()
+    # print(arr)
+
+    jumlah_angka_nol = arr.count(0)
+    while jumlah_angka_nol:
+        arr.remove(0)
+        jumlah_angka_nol-=1
+
+    # print(arr)
+    min = arr[0]
+    max = arr[-1]
+    print(f"{max}/{min} = {max/min}")
+
+input_angka = list(map(int, input("Masukkan angka: ").split()))
+cariPecahanTerbesar(input_angka)

@@ -1,0 +1,15 @@
+import numpy as np
+import cv2
+from PIL import Image
+import math
+
+# image = np.zeros((28, 28, 3), np.uint8)
+
+# image[10, 15] = [0, 0, 255]
+
+# image[21, 23] = [0, 255, 0]
+
+# cv2.imwrite('1.png', image)
+
+x1, y1, x2, y2 = 10, 15, 21, 23
+print("DIstance : ", math.sqrt((x2-x1)**2 - (y2-y1)**2))
